@@ -24,7 +24,7 @@ In this project, the structure is slightly different and includes:
 - Repository
 - Usecase
 - Delivery
-
+![img.png](img.png)
 ### Domain
 The Domain layer is similar to the Entities layer. It contains core business entities, data transfer objects, error definitions, common definitions, and constants. Additionally, it includes interface definitions for the Repository and Usecase layers.
 
