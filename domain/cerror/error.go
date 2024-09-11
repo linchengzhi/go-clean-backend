@@ -25,13 +25,19 @@ func NewError(code int, msg string) *CustomError {
 }
 
 func (e *CustomError) WithErr(err error) *CustomError {
-	e.err = err
-	return e
+	return &CustomError{
+		code: e.code,
+		msg:  e.msg,
+		err:  err,
+	}
 }
 
 func (e *CustomError) AddMsg(msg string) *CustomError {
-	e.msg = e.msg + " " + msg
-	return e
+	return &CustomError{
+		code: e.code,
+		msg:  e.msg + " " + msg,
+		err:  e.err,
+	}
 }
 
 func (e *CustomError) GetCode() int {

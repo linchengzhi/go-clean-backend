@@ -13,12 +13,12 @@ import (
 	"go.uber.org/zap"
 )
 
-var configFile = flag.String("f", "../go-clean-backend/config/config_dev.yaml", "the config file")
+var configFilePath = flag.String("f", "../go-clean-backend/config/config_dev.yaml", "the config file")
 
 func main() {
 	flag.Parse()
 
-	app, err := initializer.NewApp(*configFile)
+	app, err := initializer.NewApp(*configFilePath)
 	if err != nil {
 		panic(err)
 	}
